@@ -14,6 +14,7 @@
       ../../modules/nixos/automatic.nix
       ../../modules/hardware/bluetooth.nix
       ../../modules/nixos/user-sys-pkgs.nix
+      ../../modules/hardware/x280-fprint.nix
       inputs.home-manager.nixosModules.default
     ];
     

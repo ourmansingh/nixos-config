@@ -23,9 +23,14 @@
     nixos-hardware = {
       url = "github:nixos/nixos-hardware/master";
     };
+
+    x280-fprint = {
+      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, nur, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, nur, nixos-hardware, x280-fprint, ... }@inputs: {
     nixosConfigurations = {
       qpc = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
@@ -40,6 +45,8 @@
           ./hosts/x280/configuration.nix
           inputs.home-manager.nixosModules.default
           nixos-hardware.nixosModules.lenovo-thinkpad-x280
+          x280-fprint.nixosModules.open-fprintd
+          x280-fprint.nixosModules.python-validity
         ];
       };
     };
