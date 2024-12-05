@@ -1,4 +1,4 @@
-{ x280-fprint, ... }: 
+{ config, pkgs, lib, nixos-06cb-009a-fingerprint-sensor, ... }: 
 {
   services.open-fprintd.enable = true;
   services.python-validity.enable = true;
@@ -9,7 +9,7 @@
   
   # Authentication management.
   auth sufficient pam_unix.so   likeauth try_first_pass nullok
-  auth sufficient ${x280-fprint.localPackages.fprintd-clients}/lib/security/pam_fprintd.so
+  auth sufficient ${nixos-06cb-009a-fingerprint-sensor.fprintd-clients}/lib/security/pam_fprintd.so
   auth required pam_deny.so
   
   # Password management.
