@@ -2,7 +2,12 @@
   description = "Nixos config flake";
 
   inputs = {
+    
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    nixpkgs-23-11 = {
+      url = "github:nixos/nixpkgs/nixos-23.11";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -26,7 +31,7 @@
 
     nixos-06cb-009a-fingerprint-sensor = {
       url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
-      inputs.nixpkgs.follows = "github:nixos/nixpkgs/nixos-23.11";
+      inputs.nixpkgs.follows = "nixpkgs-23-11";
     };
   };
 
