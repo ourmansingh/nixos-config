@@ -1,9 +1,8 @@
 {
-  description = "Nixos config flake";
-
   inputs = {
-    
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs= {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     nixpkgs-23-11 = {
       url = "github:nixos/nixpkgs/nixos-23.11";
@@ -33,6 +32,10 @@
       url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
       inputs.nixpkgs.follows = "nixpkgs-23-11";
     };
+
+    stylix = {
+      url = "github:danth/stylix";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, plasma-manager, nur, nixos-hardware, nixos-06cb-009a-fingerprint-sensor, ... }@inputs: {
@@ -42,6 +45,7 @@
         modules = [
           ./hosts/qpc/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
         ];
       };
       x280 = nixpkgs.lib.nixosSystem {
@@ -49,6 +53,7 @@
         modules = [
           ./hosts/x280/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
           nixos-hardware.nixosModules.lenovo-thinkpad-x280
           nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
           nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
