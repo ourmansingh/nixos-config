@@ -7,6 +7,7 @@
     ../../modules/home-manager/creative-packages.nix
     ../../modules/home-manager/gaming-packages.nix
     ../../modules/config/base-config.nix
+    ../../modules/home-manager/work-packages.nix
   ];
   
   nixpkgs.config.allowUnfree = true;

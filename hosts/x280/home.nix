@@ -5,6 +5,7 @@
     ../../modules/config/kde.nix
     ../../modules/home-manager/base-packages.nix
     ../../modules/config/base-config.nix
+    ../../modules/home-manager/work-packages.nix
   ];
   
   nixpkgs.config.allowUnfree = true;

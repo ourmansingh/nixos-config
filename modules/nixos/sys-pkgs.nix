@@ -10,6 +10,7 @@
         killall
 	    util-linux
         usbutils
+        gh
     ];
 
     #For nixd
