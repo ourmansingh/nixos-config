@@ -1,8 +1,4 @@
-{ config, inputs, ... }:
-
-let 
-    hostname  = config.networking.hostName;
-in
+{ inputs, ... }:
 {
   # Enable auto-upgrade service for system updates
   system.autoUpgrade = {

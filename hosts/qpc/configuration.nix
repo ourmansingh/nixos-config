@@ -14,6 +14,7 @@
       ../../modules/nixos/sys-pkgs.nix
       ../../modules/nixos/automatic.nix
       ../../modules/nixos/user-sys-pkgs.nix
+      ../../modules/nixos/gaming-packages.nix
       inputs.home-manager.nixosModules.default
     ];
 
