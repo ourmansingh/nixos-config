@@ -7,6 +7,7 @@
         keepassxc
         nixd
         kitty
+        gh
     ];
 
 
