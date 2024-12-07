@@ -18,7 +18,7 @@ in
   services.mullvad-vpn = if hostname == "qpc" then {
     enable = true;
     package = pkgs.mullvad-vpn;
-  } else null;
+  } else { enable = false; };
 
   # Syncthing service configuration
   services.syncthing = {
