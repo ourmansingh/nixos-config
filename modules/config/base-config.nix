@@ -102,7 +102,7 @@
     extensions = with pkgs; [
         vscode-extensions.jnoortheen.nix-ide
         vscode-extensions.redhat.java
-    ];  
+    ];
     userSettings = {
         "files.autosave" = "off";
         "nix.serverPath" ="nixd";
