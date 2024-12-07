@@ -3,7 +3,7 @@
   stylix = { 
     enable = true;
     image = ../../wallpaper.png;
-    base16Scheme = "$(pkgs.base16-schemes)/share/themes/macintosh/yaml";
+    base16Scheme = "$(pkgs.base16-schemes)/share/themes/macintosh.yaml";
 
     fonts = {
       serif = {
