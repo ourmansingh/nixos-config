@@ -15,6 +15,7 @@
       ../../modules/nixos/automatic.nix
       ../../modules/nixos/user-sys-pkgs.nix
       ../../modules/nixos/gaming-packages.nix
+      ../../modules/nixos/stylix-theming.nix
       inputs.home-manager.nixosModules.default
     ];
 

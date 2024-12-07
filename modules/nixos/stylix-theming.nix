@@ -1,13 +1,12 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   stylix = { 
     enable = true;
     image = ../../wallpaper.png;
-    base16Scheme = "$(pkgs.base16-schemes)/share/themes/macintosh.yaml";
 
     fonts = {
       serif = {
-        package = config.stylix.fonts.sansSerif;
+        package = pkgs.dejavu_fonts;
         name = "DejaVu Serif";
       };
 
