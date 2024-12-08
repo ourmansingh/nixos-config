@@ -36,9 +36,13 @@
     stylix = {
       url = "github:danth/stylix";
     };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, nur, nixos-hardware, nixos-06cb-009a-fingerprint-sensor, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, nixos-hardware, nixos-06cb-009a-fingerprint-sensor, hyprland, ... }@inputs: {
     nixosConfigurations = {
       qpc = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
