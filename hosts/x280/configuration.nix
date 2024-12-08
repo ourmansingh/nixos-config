@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/de/kde-desktop.nix
+      ../../modules/de/hyprland-nixos.nix
       ../../modules/nixos/hmModule.nix
       ../../modules/nixos/sys-pkgs.nix
       ../../modules/nixos/automatic.nix
