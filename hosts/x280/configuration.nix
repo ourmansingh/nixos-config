@@ -8,14 +8,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/de/hyprland-nixos.nix
+      ../../modules/de/kde-desktop.nix
       ../../modules/nixos/hmModule.nix
       ../../modules/nixos/sys-pkgs.nix
       ../../modules/nixos/automatic.nix
       ../../modules/hardware/bluetooth.nix
       ../../modules/nixos/user-sys-pkgs.nix
       ../../modules/hardware/x280-fprint.nix
-      ../../modules/nixos/stylix-theming.nix
       inputs.home-manager.nixosModules.default
     ];
     
