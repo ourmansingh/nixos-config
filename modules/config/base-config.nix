@@ -11,7 +11,6 @@
               sponsorblock
               dearrow
               istilldontcareaboutcookies
-              socialfocus
           ];
 
           search = {
