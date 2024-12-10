@@ -11,6 +11,7 @@
               sponsorblock
               dearrow
               istilldontcareaboutcookies
+              socialfocus
           ];
 
           search = {
@@ -29,6 +30,7 @@
           bookmarks = {};
           settings = {
               "browser.startup.homepage" = "about:home";
+
 
               # Disable irritating first-run stuff
               "browser.disableResetPrompt" = true;
