@@ -3,7 +3,7 @@
 {
     home.packages = with pkgs; [
         vesktop
-        libreoffice-fresh
+        libreoffice-qt6-fresh
         keepassxc
         nixd
         kitty
